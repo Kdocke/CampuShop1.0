@@ -68,9 +68,33 @@ JDK配置、Maven配置、TomCat配置
 
 **实体类解析：** 
 
-![实体类解析](<https://raw.githubusercontent.com/Kdocke/MyDocumentImg/master/CampuShop1.0/%E5%AE%9E%E4%BD%93%E7%B1%BB/001-%E5%AE%9E%E4%BD%93%E7%B1%BB%E8%A7%A3%E6%9E%90.jpg>)
+![实体类解析](<https://raw.githubusercontent.com/Kdocke/MyDocumentImg/master/CampuShop1.0/%E5%AE%9E%E4%BD%93%E7%B1%BB/001-%E5%AE%9E%E4%BD%93%E7%B1%BB%E8%A7%A3%E6%9E%90.png>)
 
-**1. 区域实体类设计** 
+**1. 区域实体类与数据库表设计** 
 
-![区域实体类设计](<https://raw.githubusercontent.com/Kdocke/MyDocumentImg/master/CampuShop1.0/%E5%AE%9E%E4%BD%93%E7%B1%BB/002-%E5%8C%BA%E5%9F%9F%E5%AE%9E%E4%BD%93%E7%B1%BB%E8%AE%BE%E8%AE%A1.jpg>)
+![区域实体类](<https://raw.githubusercontent.com/Kdocke/MyDocumentImg/master/CampuShop1.0/%E5%AE%9E%E4%BD%93%E7%B1%BB/002-%E5%8C%BA%E5%9F%9F%E5%AE%9E%E4%BD%93%E7%B1%BB.png>)
+
+```sql
+CREATE DataBase `o2o`;
+USE o2o;
+CREATE TABLE `tb_area` (
+  `area_id` int(2) NOT NULL AUTO_INCREMENT,
+  `area_name` varchar(200) NOT NULL,
+  `priority` int(2) NOT NULL DEFAULT '0',
+  `create_time` datetime DEFAULT NULL,
+  `last_edit_time` datetime DEFAULT NULL,
+  PRIMARY KEY (`area_id`),
+  UNIQUE KEY `UK_AREA` (`area_name`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+```
+
+补充：MySQL 主要包含两种引擎，一种是 INNODB，另一种是 MYISAM，区别是INNODB 是行级锁，MYISAM 是表级锁，但读取更快。
+
+**2. 用户实体类与数据库表设计**
+
+![用户实体类](<https://raw.githubusercontent.com/Kdocke/MyDocumentImg/master/CampuShop1.0/%E5%AE%9E%E4%BD%93%E7%B1%BB/003-%E7%94%A8%E6%88%B7%E5%AE%9E%E4%BD%93%E7%B1%BB.png>)
+
+```sql
+
+```
 
