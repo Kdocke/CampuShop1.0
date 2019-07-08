@@ -3,7 +3,7 @@ package com.kdocke.o2o.entity;
 import java.util.Date;
 
 /**
- * 地区实体类
+ * 地域 实体类
  * 
  * @author Kdocke
  *
