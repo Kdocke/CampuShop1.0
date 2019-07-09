@@ -70,4 +70,5 @@ JDK配置、Maven配置、TomCat配置
 
 ![实体类解析](<https://raw.githubusercontent.com/Kdocke/MyDocumentImg/master/CampuShop1.0/%E5%AE%9E%E4%BD%93%E7%B1%BB/001-%E5%AE%9E%E4%BD%93%E7%B1%BB%E8%A7%A3%E6%9E%90.png>)
 
-[主要实体类与数据库表设计]()
+[主要实体类与数据库表设计](https://github.com/Kdocke/CampuShop1.0/blob/master/note/%E4%B8%BB%E8%A6%81%E5%AE%9E%E4%BD%93%E7%B1%BB%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8%E8%AE%BE%E8%AE%A1.md)
+
