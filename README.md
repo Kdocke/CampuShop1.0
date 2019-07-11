@@ -78,11 +78,11 @@ JDK配置、Maven配置、TomCat配置
 
 ## 五、知识点
 
-**1. SpringMVC: DispatcherServlet: **DispatcherServlet是整个 MVC 框架中最为核心的一部分，主要用来拦截符合要求的外部请求，并把请求分发到不同的控制器中去，根据控制器处理后的结果，生成相应的响应，发送到客户端。
+**1. SpringMVC: DispatcherServlet: ** DispatcherServlet是整个 MVC 框架中最为核心的一部分，主要用来拦截符合要求的外部请求，并把请求分发到不同的控制器中去，根据控制器处理后的结果，生成相应的响应，发送到客户端。
 
-**2. SpringMVC: IOC和AOP: **
+**2. SpringMVC: IOC和AOP: ** 
 
 * IOC: 依赖自动注入
 * AOP: 切面编程
 
-**3. MyBatis: ORM: **ORM 是通过使用描述对象和数据库映射之间的元数据，将程序中的数据自动持久化到关系型数据库中。
+**3. MyBatis: ORM: ** ORM 是通过使用描述对象和数据库映射之间的元数据，将程序中的数据自动持久化到关系型数据库中。
