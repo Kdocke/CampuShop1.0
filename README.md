@@ -76,7 +76,13 @@ JDK配置、Maven配置、TomCat配置
 
 [主要实体类与数据库表设计](https://github.com/Kdocke/CampuShop1.0/blob/master/note/%E4%B8%BB%E8%A6%81%E5%AE%9E%E4%BD%93%E7%B1%BB%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8%E8%AE%BE%E8%AE%A1.md)
 
-## 五、知识点
+## 五、Logback日志配置
+
+ **Logback 主要模块：** logback-access、logback-classic、logback-core
+
+**Logback 的主要标签：** logger、appender、layout
+
+## 六、知识点
 
 **1.SpringMVC:DispatcherServlet:** DispatcherServlet是整个 MVC 框架中最为核心的一部分，主要用来拦截符合要求的外部请求，并把请求分发到不同的控制器中去，根据控制器处理后的结果，生成相应的响应，发送到客户端。
 
