@@ -1,7 +1,7 @@
 $(function(){
 	var initUrl = '/campu-shop/shopadmin/getshopinitinfo';
 	var registerShopUrl = '/campu-shop/shopadmin/registershop';
-	alert(initUrl);
+//	alert(initUrl);
 	getShopInitInfo();
 	function getShopInitInfo(){
 		$.getJSON(initUrl, function(data){
@@ -38,6 +38,12 @@ $(function(){
 			var formData = new FormData();
 			formData.append('shopImg', shopImg);
 			formData.append('shopStr', JSON.stringify(shop));
+			var verifyCodeActual = $('#j_captcha').val();
+			if (!verifyCodeActual) {
+				$.toast('请输入验证码!');
+				return;
+			}
+			formData.append('verifyCodeActual', verifyCodeActual);
 			$.ajax({
 				url:registerShopUrl,
 				type:'POST',
@@ -51,6 +57,7 @@ $(function(){
 					}else {
 						$.toast('提交失败!' + data.errMsg);
 					}
+					$('#captcha_img').click();
 				}
 			});
 		});
