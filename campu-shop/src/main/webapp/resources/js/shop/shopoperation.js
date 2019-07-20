@@ -18,7 +18,7 @@ $(function(){
 				$('#area').html(tempAreaHtml);
 			}
 		});
-		$('submit').click(function(){
+		$('#submit').click(function(){
 			var shop = {};
 			shop.shopName = $('#shop-name').val();
 			shop.shopAddr = $('#shop-addr').val();
