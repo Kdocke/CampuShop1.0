@@ -65,6 +65,26 @@ public class ImageUtil {
 		String nowTimeStr = sDateFormat.format(new Date());
 		return nowTimeStr + rannum;
 	}
+	
+	/**
+	 * 判断 storePath 是文件的路径还是目录的路径
+	 * 如果 storePath 是文件路径则删除该文件
+	 * 如果 storePath 是目录路径则删除该目录下的所有文件
+	 * @param storePath
+	 * @throws IOException
+	 */
+	public static void deleteFileOrPath(String storePath) {
+		File fileOrPath = new File(PathUtil.getImgBasePath() + storePath);
+		if (fileOrPath.exists()) {
+			if (fileOrPath.isDirectory()) {
+				File files[] = fileOrPath.listFiles();
+				for(int i = 0; i < files.length; i++) {
+					files[i].delete();
+				}
+			}
+			fileOrPath.delete();
+		}
+	}
 
 	public static void main(String[] args) throws IOException {
 		Thumbnails.of(new File("F:\\TempDirectory\\cs\\imgtest\\mn.jpg")).size(200, 200)
@@ -72,5 +92,5 @@ public class ImageUtil {
 				.outputQuality(0.8f).toFile("F:\\TempDirectory\\cs\\imgtest\\mnw.jpg");
 		System.out.println("Finish");
 	}
-
+	
 }
