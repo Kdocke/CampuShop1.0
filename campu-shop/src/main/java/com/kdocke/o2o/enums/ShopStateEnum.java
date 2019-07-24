@@ -1,5 +1,11 @@
 package com.kdocke.o2o.enums;
 
+/**
+ * 商铺状态枚举类
+ * 
+ * @author Kdocke
+ *
+ */
 public enum ShopStateEnum {
 
 	CHECK(0, "审核中"), OFFLINE(-1, "非法店铺"), SUCCESS(1, "操作成功"), PASS(2, "通过认证"), INNER_ERROR(-1001,

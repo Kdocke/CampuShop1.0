@@ -5,6 +5,12 @@ import java.util.List;
 import com.kdocke.o2o.entity.Shop;
 import com.kdocke.o2o.enums.ShopStateEnum;
 
+/**
+ * 对 Shop 操作后所返回的结果
+ * 
+ * @author Kdocke
+ *
+ */
 public class ShopExecution {
 
 	// 结果状态
@@ -27,25 +33,28 @@ public class ShopExecution {
 
 	/**
 	 * 店铺操作失败时使用的构造器
+	 * 
 	 * @param stateEnum
 	 */
 	public ShopExecution(ShopStateEnum stateEnum) {
 		this.state = stateEnum.getState();
 		this.stateInfo = stateEnum.getStateInfo();
 	}
-	
+
 	/**
 	 * 店铺操作成功时使用的构造器
+	 * 
 	 * @param stateEnum
 	 */
 	public ShopExecution(ShopStateEnum stateEnum, Shop shop) {
 		this.state = stateEnum.getState();
 		this.stateInfo = stateEnum.getStateInfo();
 		this.shop = shop;
-	} 
+	}
 
 	/**
 	 * 店铺操作成功时使用的构造器
+	 * 
 	 * @param stateEnum
 	 */
 	public ShopExecution(ShopStateEnum stateEnum, List<Shop> shopList) {
@@ -92,6 +101,6 @@ public class ShopExecution {
 
 	public void setShopList(List<Shop> shopList) {
 		this.shopList = shopList;
-	} 
-	
+	}
+
 }
