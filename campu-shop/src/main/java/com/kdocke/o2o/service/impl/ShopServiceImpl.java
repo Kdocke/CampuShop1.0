@@ -22,11 +22,17 @@ public class ShopServiceImpl implements ShopService {
 	@Autowired
 	private ShopDao shopDao;
 
+	/**
+	 * 通过Id返回商铺
+	 */
 	@Override
 	public Shop getByShopId(long shopId) {
 		return shopDao.queryByShopId(shopId);
 	}
 
+	/**
+	 * 修改商铺信息
+	 */
 	@Override
 	public ShopExecution modifyShop(Shop shop, InputStream shopImgInputStream, String fileName)
 			throws ShopOperationException {
@@ -56,6 +62,9 @@ public class ShopServiceImpl implements ShopService {
 		}
 	}
 	
+	/**
+	 * 添加商铺
+	 */
 	@Override
 	@Transactional
 	public ShopExecution addShop(Shop shop, InputStream shopImgInputStream, String fileName) {
@@ -93,6 +102,12 @@ public class ShopServiceImpl implements ShopService {
 		return new ShopExecution(ShopStateEnum.CHECK, shop);
 	}
 
+	/**
+	 * 添加商铺图片
+	 * @param shop
+	 * @param shopImgInputStream
+	 * @param fileName
+	 */
 	private void addShopImg(Shop shop, InputStream shopImgInputStream, String fileName) {
 		// 获取 shop 图片目录的相对值路径
 		String dest = PathUtil.getShopImagePath(shop.getShopId());
