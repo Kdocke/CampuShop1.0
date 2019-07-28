@@ -18,6 +18,13 @@ public class ImageUtil {
 	private static final SimpleDateFormat sDateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
 	private static final Random r = new Random();
 
+	/**
+	 * 生成缩略图
+	 * @param thumbnailInputStream
+	 * @param fileName
+	 * @param targetAddr
+	 * @return
+	 */
 	public static String generateThumbnail(InputStream thumbnailInputStream, String fileName, String targetAddr) {
 		String realFileName = getRandomFileName();
 		String extension = getFileExtension(fileName);
