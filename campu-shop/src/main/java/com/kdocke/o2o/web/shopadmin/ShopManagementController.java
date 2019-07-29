@@ -44,6 +44,11 @@ public class ShopManagementController {
 	@Autowired
 	private AreaService areaService;
 	
+	/**
+	 * 通过 id 获取 Shop 
+	 * @param request
+	 * @return
+	 */
 	@RequestMapping(value="/getshopbyid", method=RequestMethod.GET)
 	@ResponseBody
 	private Map<String, Object> getShopById(HttpServletRequest request){
@@ -67,6 +72,10 @@ public class ShopManagementController {
 		return modelMap;
 	}
 	
+	/**
+	 * 获取 Shop 的基本信息
+	 * @return
+	 */
 	@RequestMapping(value="/getshopinitinfo", method=RequestMethod.GET)
 	@ResponseBody
 	private Map<String, Object> getShopInitInfo(){
@@ -86,6 +95,11 @@ public class ShopManagementController {
 		return modelMap;
 	}
 	
+	/**
+	 * 注册商铺
+	 * @param request
+	 * @return
+	 */
 	@RequestMapping(value = "/registershop", method = RequestMethod.POST)
 	@ResponseBody
 	private Map<String, Object> registerShop(HttpServletRequest request) {
