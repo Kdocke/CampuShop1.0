@@ -9,6 +9,15 @@ import com.kdocke.o2o.exception.ShopOperationException;
 public interface ShopService {
 
 	/**
+	 * 根据 shopCondition 分页返回相应店铺列表数据
+	 * @param shopCondition
+	 * @param pageIndex
+	 * @param pageSize
+	 * @return
+	 */
+	public ShopExecution getShopList(Shop shopCondition, int pageIndex, int pageSize);
+	
+	/**
 	 * 通过店铺 Id 获取店铺信息
 	 * @param shopId
 	 * @return

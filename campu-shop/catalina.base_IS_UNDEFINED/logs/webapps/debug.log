@@ -21,3 +21,15 @@
 2019-07-31 20:00:05:614 [main] DEBUG com.kdocke.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? and s.owner_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
 2019-07-31 20:00:05:615 [main] DEBUG com.kdocke.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 3(Long), 1(Long)
 2019-07-31 20:00:05:628 [main] DEBUG com.kdocke.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2019-07-31 22:21:38:767 [main] DEBUG com.kdocke.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,? 
+2019-07-31 22:21:38:796 [main] DEBUG com.kdocke.o2o.dao.ShopDao.queryShopList - ==> Parameters: 1(Long), 0(Integer), 2(Integer)
+2019-07-31 22:21:38:852 [main] DEBUG com.kdocke.o2o.dao.ShopDao.queryShopList - <==      Total: 2
+2019-07-31 22:21:38:860 [main] DEBUG com.kdocke.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
+2019-07-31 22:21:38:860 [main] DEBUG com.kdocke.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 1(Long)
+2019-07-31 22:21:38:882 [main] DEBUG com.kdocke.o2o.dao.ShopDao.queryShopCount - <==      Total: 1
+2019-07-31 22:22:03:846 [main] DEBUG com.kdocke.o2o.dao.ShopDao.queryShopList - ==>  Preparing: SELECT s.shop_id, s.shop_name, s.shop_desc, s.shop_addr, s.phone, s.shop_img, s.priority, s.create_time, s.last_edit_time, s.enable_status, s.advice, a.area_id, a.area_name, sc.shop_category_id, sc.shop_category_name FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id ORDER BY s.priority DESC LIMIT ?,? 
+2019-07-31 22:22:03:870 [main] DEBUG com.kdocke.o2o.dao.ShopDao.queryShopList - ==> Parameters: 1(Long), 2(Integer), 2(Integer)
+2019-07-31 22:22:03:899 [main] DEBUG com.kdocke.o2o.dao.ShopDao.queryShopList - <==      Total: 1
+2019-07-31 22:22:03:908 [main] DEBUG com.kdocke.o2o.dao.ShopDao.queryShopCount - ==>  Preparing: SELECT count(1) FROM tb_shop s, tb_area a, tb_shop_category sc WHERE s.shop_category_id = ? AND s.area_id = a.area_id AND s.shop_category_id = sc.shop_category_id 
+2019-07-31 22:22:03:909 [main] DEBUG com.kdocke.o2o.dao.ShopDao.queryShopCount - ==> Parameters: 1(Long)
+2019-07-31 22:22:03:930 [main] DEBUG com.kdocke.o2o.dao.ShopDao.queryShopCount - <==      Total: 1

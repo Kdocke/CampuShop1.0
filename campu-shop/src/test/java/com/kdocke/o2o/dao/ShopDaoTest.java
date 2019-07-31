@@ -21,7 +21,7 @@ public class ShopDaoTest extends BaseTest {
 	private ShopDao shopDao;
 	
 	@Test
-	public void testQueryShopList() {
+	public void testQueryShopListAndCount() {
 		Shop shopCondition = new Shop();
 		PersonInfo owner = new PersonInfo();
 		owner.setUserId(1L);
