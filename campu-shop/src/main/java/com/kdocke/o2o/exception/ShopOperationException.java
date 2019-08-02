@@ -8,7 +8,7 @@ package com.kdocke.o2o.exception;
  */
 public class ShopOperationException extends RuntimeException {
 
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 7815471144593063626L;
 
 	public ShopOperationException(String msg) {
 		super(msg);
