@@ -74,7 +74,7 @@ public class ProductCategoryManagementController {
 
 	@RequestMapping(value = "/removeproductcategory", method = RequestMethod.POST)
 	@ResponseBody
-	private Map<String, Object> removeProductCategory(@RequestBody Long productCategoryId, HttpServletRequest request) {
+	private Map<String, Object> removeProductCategory(Long productCategoryId, HttpServletRequest request) {
 		Map<String, Object> modelMap = new HashMap<String, Object>();
 		if (productCategoryId != null && productCategoryId > 0) {
 			try {
