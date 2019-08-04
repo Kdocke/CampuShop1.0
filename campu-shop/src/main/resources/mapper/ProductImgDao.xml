@@ -8,13 +8,7 @@
 		VALUES
 		<foreach collection="list" item="productImg" index="index"
 			separator=",">
-			(
-			#{productImg.imgAddr},
-			#{productImg.imgDesc},
-			#{productImg.priority},
-			#{productImg.createTime},
-			#{productImg.productId}
-			)
+			(#{productImg.imgAddr},#{productImg.imgDesc},#{productImg.priority},#{productImg.createTime},#{productImg.productId})
 		</foreach>
 	</insert>
 </mapper>

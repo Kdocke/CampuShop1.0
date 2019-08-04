@@ -6,7 +6,7 @@ import com.kdocke.o2o.entity.ProductImg;
 
 public interface ProductImgDao {
 	
-	List<ProductImg> queryProductImgList(long productId);
+//	List<ProductImg> queryProductImgList(long productId);
 	
 	/**
 	 * 批量添加商品详情图片
@@ -15,6 +15,6 @@ public interface ProductImgDao {
 	 */
 	int batchInsertProductImg(List<ProductImg> productImgList);
 	
-	int deleteProductImgByProductId(long productId);
+//	int deleteProductImgByProductId(long productId);
 
 }

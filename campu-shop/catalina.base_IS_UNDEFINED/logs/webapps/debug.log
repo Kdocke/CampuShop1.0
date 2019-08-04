@@ -1,39 +1,19 @@
-2019-08-02 11:26:09:156 [main] DEBUG c.k.o.d.P.batchInsertProductCategory - ==>  Preparing: INSERT INTO tb_product_category(product_category_name, priority, create_time, shop_id) VALUES ( ?, ?, ?, ? ) , ( ?, ?, ?, ? ) 
-2019-08-02 11:26:09:223 [main] DEBUG c.k.o.d.P.batchInsertProductCategory - ==> Parameters: 商品类别1(String), 1(Integer), 2019-08-02 11:26:08.653(Timestamp), 1(Long), 商品类别2(String), 2(Integer), 2019-08-02 11:26:08.653(Timestamp), 1(Long)
-2019-08-02 11:26:09:273 [main] DEBUG c.k.o.d.P.batchInsertProductCategory - <==    Updates: 2
-2019-08-02 12:47:27:037 [main] DEBUG c.k.o.d.P.batchInsertProductCategory - ==>  Preparing: INSERT INTO tb_product_category(product_category_name, priority, create_time, shop_id) VALUES ( ?, ?, ?, ? ) , ( ?, ?, ?, ? ) 
-2019-08-02 12:47:27:067 [main] DEBUG c.k.o.d.P.batchInsertProductCategory - ==> Parameters: 商品类别1(String), 1(Integer), 2019-08-02 12:47:26.667(Timestamp), 1(Long), 商品类别2(String), 2(Integer), 2019-08-02 12:47:26.667(Timestamp), 1(Long)
-2019-08-02 12:47:27:129 [main] DEBUG c.k.o.d.P.batchInsertProductCategory - <==    Updates: 2
-2019-08-02 12:47:27:157 [main] DEBUG c.k.o.d.P.queryProductCategoryList - ==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id = ? ORDER BY priority DESC 
-2019-08-02 12:47:27:157 [main] DEBUG c.k.o.d.P.queryProductCategoryList - ==> Parameters: 1(Long)
-2019-08-02 12:47:27:185 [main] DEBUG c.k.o.d.P.queryProductCategoryList - <==      Total: 9
-2019-08-02 12:47:27:193 [main] DEBUG c.k.o.d.P.queryProductCategoryList - ==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id = ? ORDER BY priority DESC 
-2019-08-02 12:47:27:193 [main] DEBUG c.k.o.d.P.queryProductCategoryList - ==> Parameters: 1(Long)
-2019-08-02 12:47:27:199 [main] DEBUG c.k.o.d.P.queryProductCategoryList - <==      Total: 9
-2019-08-02 12:47:27:201 [main] DEBUG c.k.o.dao.ProductCategoryDao.deleteProductCategory - ==>  Preparing: DELETE FROM tb_product_category WHERE product_category_id = ? AND shop_id = ? 
-2019-08-02 12:47:27:202 [main] DEBUG c.k.o.dao.ProductCategoryDao.deleteProductCategory - ==> Parameters: 5(Long), 1(Long)
-2019-08-02 12:47:27:230 [main] DEBUG c.k.o.dao.ProductCategoryDao.deleteProductCategory - <==    Updates: 1
-2019-08-02 12:47:27:231 [main] DEBUG c.k.o.dao.ProductCategoryDao.deleteProductCategory - ==>  Preparing: DELETE FROM tb_product_category WHERE product_category_id = ? AND shop_id = ? 
-2019-08-02 12:47:27:232 [main] DEBUG c.k.o.dao.ProductCategoryDao.deleteProductCategory - ==> Parameters: 9(Long), 1(Long)
-2019-08-02 12:47:27:256 [main] DEBUG c.k.o.dao.ProductCategoryDao.deleteProductCategory - <==    Updates: 1
-2019-08-02 12:47:27:256 [main] DEBUG c.k.o.dao.ProductCategoryDao.deleteProductCategory - ==>  Preparing: DELETE FROM tb_product_category WHERE product_category_id = ? AND shop_id = ? 
-2019-08-02 12:47:27:257 [main] DEBUG c.k.o.dao.ProductCategoryDao.deleteProductCategory - ==> Parameters: 4(Long), 1(Long)
-2019-08-02 12:47:27:280 [main] DEBUG c.k.o.dao.ProductCategoryDao.deleteProductCategory - <==    Updates: 1
-2019-08-02 12:47:27:281 [main] DEBUG c.k.o.dao.ProductCategoryDao.deleteProductCategory - ==>  Preparing: DELETE FROM tb_product_category WHERE product_category_id = ? AND shop_id = ? 
-2019-08-02 12:47:27:282 [main] DEBUG c.k.o.dao.ProductCategoryDao.deleteProductCategory - ==> Parameters: 8(Long), 1(Long)
-2019-08-02 12:47:27:306 [main] DEBUG c.k.o.dao.ProductCategoryDao.deleteProductCategory - <==    Updates: 1
-2019-08-02 12:48:09:851 [main] DEBUG c.k.o.d.P.batchInsertProductCategory - ==>  Preparing: INSERT INTO tb_product_category(product_category_name, priority, create_time, shop_id) VALUES ( ?, ?, ?, ? ) , ( ?, ?, ?, ? ) 
-2019-08-02 12:48:09:911 [main] DEBUG c.k.o.d.P.batchInsertProductCategory - ==> Parameters: 商品类别1(String), 1(Integer), 2019-08-02 12:48:09.368(Timestamp), 1(Long), 商品类别2(String), 2(Integer), 2019-08-02 12:48:09.368(Timestamp), 1(Long)
-2019-08-02 12:48:09:987 [main] DEBUG c.k.o.d.P.batchInsertProductCategory - <==    Updates: 2
-2019-08-02 12:48:10:002 [main] DEBUG c.k.o.d.P.queryProductCategoryList - ==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id = ? ORDER BY priority DESC 
-2019-08-02 12:48:10:003 [main] DEBUG c.k.o.d.P.queryProductCategoryList - ==> Parameters: 1(Long)
-2019-08-02 12:48:10:022 [main] DEBUG c.k.o.d.P.queryProductCategoryList - <==      Total: 7
-2019-08-02 12:48:10:030 [main] DEBUG c.k.o.d.P.queryProductCategoryList - ==>  Preparing: SELECT product_category_id, product_category_name, priority, create_time, shop_id FROM tb_product_category WHERE shop_id = ? ORDER BY priority DESC 
-2019-08-02 12:48:10:030 [main] DEBUG c.k.o.d.P.queryProductCategoryList - ==> Parameters: 1(Long)
-2019-08-02 12:48:10:033 [main] DEBUG c.k.o.d.P.queryProductCategoryList - <==      Total: 7
-2019-08-02 12:48:10:036 [main] DEBUG c.k.o.dao.ProductCategoryDao.deleteProductCategory - ==>  Preparing: DELETE FROM tb_product_category WHERE product_category_id = ? AND shop_id = ? 
-2019-08-02 12:48:10:036 [main] DEBUG c.k.o.dao.ProductCategoryDao.deleteProductCategory - ==> Parameters: 11(Long), 1(Long)
-2019-08-02 12:48:10:064 [main] DEBUG c.k.o.dao.ProductCategoryDao.deleteProductCategory - <==    Updates: 1
-2019-08-02 12:48:10:064 [main] DEBUG c.k.o.dao.ProductCategoryDao.deleteProductCategory - ==>  Preparing: DELETE FROM tb_product_category WHERE product_category_id = ? AND shop_id = ? 
-2019-08-02 12:48:10:065 [main] DEBUG c.k.o.dao.ProductCategoryDao.deleteProductCategory - ==> Parameters: 10(Long), 1(Long)
-2019-08-02 12:48:10:089 [main] DEBUG c.k.o.dao.ProductCategoryDao.deleteProductCategory - <==    Updates: 1
+2019-08-05 00:01:35:226 [main] DEBUG c.k.o2o.dao.ProductImgDao.batchInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(img_addr,img_desc,priority,create_time,product_id) VALUES ( ?, ?, ?, ?, ? ) , ( ?, ?, ?, ?, ? ) 
+2019-08-05 00:01:35:307 [main] DEBUG c.k.o2o.dao.ProductImgDao.batchInsertProductImg - ==> Parameters: 图片1(String), 测试图片1(String), 1(Integer), 2019-08-05 00:01:34.812(Timestamp), 1(Long), 图片2(String), 测试图片2(String), 1(Integer), 2019-08-05 00:01:34.812(Timestamp), 1(Long)
+2019-08-05 00:02:49:728 [main] DEBUG c.k.o2o.dao.ProductImgDao.batchInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(img_addr,img_desc,priority,create_time,product_id) VALUES (?,?,?,?,?) , (?,?,?,?,?) 
+2019-08-05 00:02:49:765 [main] DEBUG c.k.o2o.dao.ProductImgDao.batchInsertProductImg - ==> Parameters: 图片1(String), 测试图片1(String), 1(Integer), 2019-08-05 00:02:49.305(Timestamp), 1(Long), 图片2(String), 测试图片2(String), 1(Integer), 2019-08-05 00:02:49.305(Timestamp), 1(Long)
+2019-08-05 00:15:37:376 [main] DEBUG com.kdocke.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(product_name,product_desc,img_addr, normal_price,promotion_price,priority,create_time, last_edit_time,enable_status,point,product_category_id, shop_id) VALUES (?,?,?, ?,?,?,?, ?,?,?,?, ?) 
+2019-08-05 00:18:17:300 [main] DEBUG com.kdocke.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(product_name,product_desc,img_addr, normal_price,promotion_price,priority,create_time, last_edit_time,enable_status,product_category_id,shop_id) VALUES (?,?,?, ?,?,?,?, ?,?,?,?) 
+2019-08-05 00:18:17:347 [main] DEBUG com.kdocke.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试1(String), 测试Desc1(String), test1(String), null, null, 0(Integer), 2019-08-05 00:18:16.897(Timestamp), 2019-08-05 00:18:16.897(Timestamp), 1(Integer), 1(Long), 1(Long)
+2019-08-05 00:19:17:774 [main] DEBUG com.kdocke.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(product_name,product_desc,img_addr, normal_price,promotion_price,priority,create_time, last_edit_time,enable_status,product_category_id,shop_id) VALUES (?,?,?, ?,?,?,?, ?,?,?,?) 
+2019-08-05 00:19:17:810 [main] DEBUG com.kdocke.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试1(String), 测试Desc1(String), test1(String), null, null, 0(Integer), 2019-08-05 00:19:17.39(Timestamp), 2019-08-05 00:19:17.39(Timestamp), 1(Integer), 1(Long), 1(Long)
+2019-08-05 00:19:17:884 [main] DEBUG com.kdocke.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
+2019-08-05 00:19:17:893 [main] DEBUG com.kdocke.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(product_name,product_desc,img_addr, normal_price,promotion_price,priority,create_time, last_edit_time,enable_status,product_category_id,shop_id) VALUES (?,?,?, ?,?,?,?, ?,?,?,?) 
+2019-08-05 00:19:17:894 [main] DEBUG com.kdocke.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试2(String), 测试Desc2(String), test2(String), null, null, 0(Integer), 2019-08-05 00:19:17.39(Timestamp), 2019-08-05 00:19:17.39(Timestamp), 0(Integer), 1(Long), 1(Long)
+2019-08-05 00:19:17:926 [main] DEBUG com.kdocke.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
+2019-08-05 00:19:17:927 [main] DEBUG com.kdocke.o2o.dao.ProductDao.insertProduct - ==>  Preparing: INSERT INTO tb_product(product_name,product_desc,img_addr, normal_price,promotion_price,priority,create_time, last_edit_time,enable_status,product_category_id,shop_id) VALUES (?,?,?, ?,?,?,?, ?,?,?,?) 
+2019-08-05 00:19:17:928 [main] DEBUG com.kdocke.o2o.dao.ProductDao.insertProduct - ==> Parameters: 测试3(String), 测试Desc3(String), test3(String), null, null, 0(Integer), 2019-08-05 00:19:17.39(Timestamp), 2019-08-05 00:19:17.39(Timestamp), 1(Integer), 1(Long), 1(Long)
+2019-08-05 00:19:17:985 [main] DEBUG com.kdocke.o2o.dao.ProductDao.insertProduct - <==    Updates: 1
+2019-08-05 00:20:07:917 [main] DEBUG c.k.o2o.dao.ProductImgDao.batchInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(img_addr,img_desc,priority,create_time,product_id) VALUES (?,?,?,?,?) , (?,?,?,?,?) 
+2019-08-05 00:20:07:954 [main] DEBUG c.k.o2o.dao.ProductImgDao.batchInsertProductImg - ==> Parameters: 图片1(String), 测试图片1(String), 1(Integer), 2019-08-05 00:20:07.503(Timestamp), 1(Long), 图片2(String), 测试图片2(String), 1(Integer), 2019-08-05 00:20:07.503(Timestamp), 1(Long)
+2019-08-05 00:20:08:019 [main] DEBUG c.k.o2o.dao.ProductImgDao.batchInsertProductImg - <==    Updates: 2
