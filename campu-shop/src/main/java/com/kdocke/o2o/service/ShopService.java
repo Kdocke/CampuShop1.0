@@ -1,7 +1,6 @@
 package com.kdocke.o2o.service;
 
-import java.io.InputStream;
-
+import com.kdocke.o2o.dto.ImageHolder;
 import com.kdocke.o2o.dto.ShopExecution;
 import com.kdocke.o2o.entity.Shop;
 import com.kdocke.o2o.exception.ShopOperationException;
@@ -31,7 +30,7 @@ public interface ShopService {
 	 * @param fileName
 	 * @return
 	 */
-	ShopExecution modifyShop(Shop shop, InputStream shopImgInputStream, String fileName) throws ShopOperationException;
+	ShopExecution modifyShop(Shop shop, ImageHolder thumbnail) throws ShopOperationException;
 	
 	/**
 	 * 注册店铺信息,包括图片处理
@@ -40,6 +39,6 @@ public interface ShopService {
 	 * @param fileName
 	 * @return
 	 */
-	ShopExecution addShop(Shop shop, InputStream shopImgInputStream, String fileName) throws ShopOperationException;
+	ShopExecution addShop(Shop shop, ImageHolder thumbnail) throws ShopOperationException;
 	
 }
