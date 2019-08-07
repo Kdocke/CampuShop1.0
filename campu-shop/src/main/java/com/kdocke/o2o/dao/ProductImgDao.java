@@ -6,7 +6,12 @@ import com.kdocke.o2o.entity.ProductImg;
 
 public interface ProductImgDao {
 
-	 List<ProductImg> queryProductImgList(long productId);
+	/**
+	 * 根据 productId 查询出所有商品详情图
+	 * @param productId
+	 * @return
+	 */
+	List<ProductImg> queryProductImgList(long productId);
 
 	/**
 	 * 批量添加商品详情图片
