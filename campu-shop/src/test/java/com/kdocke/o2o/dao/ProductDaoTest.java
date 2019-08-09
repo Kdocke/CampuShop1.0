@@ -7,6 +7,7 @@ import java.util.Date;
 import java.util.List;
 
 import org.junit.FixMethodOrder;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +27,7 @@ public class ProductDaoTest extends BaseTest {
 	@Autowired
 	private ProductImgDao productImgDao;
 
+	@Ignore
 	@Test
 	public void testAInsertProduct() throws Exception {
 		Shop shop1 = new Shop();
@@ -74,6 +76,24 @@ public class ProductDaoTest extends BaseTest {
 		assertEquals(1, effectedNum);
 		effectedNum = productDao.insertProduct(product3);
 		assertEquals(1, effectedNum);
+	}
+	
+	@Test
+	public void testBQueryProductList() throws Exception {
+		Product product = new Product();
+		// 分页查询,预期返回三条结果
+		List<Product> productList = productDao.queryProductList(product, 0, 3);
+		assertEquals(3, productList.size());
+		// 查询商品总数
+		int count = productDao.queryProductCount(product);
+		assertEquals(8, count);
+		
+		// 使用商品名称模糊查询,预期返回 7 条结果
+		product.setProductName("测试");
+		productList = productDao.queryProductList(product, 0, 3);
+		assertEquals(3, productList.size());
+		count = productDao.queryProductCount(product);
+		assertEquals(7, count);
 	}
 	
 	@Test

@@ -86,6 +86,7 @@ public class ProductManagementController {
 			try {
 				// 从 session 中获取当前店铺的 Id 并赋值给 product, 减少对前端数据的依赖
 				Shop currentShop = (Shop) request.getSession().getAttribute("currentShop");
+				System.out.println("AddProduct 中 Product 是否为空: " + (currentShop == null));
 				product.setShop(currentShop);
 				// 执行添加操作
 				ProductExecution pe = productService.addProduct(product, thumbnail, productImgList);
@@ -173,9 +174,6 @@ public class ProductManagementController {
 			String productStr = HttpServletRequestUtil.getString(request, "productStr");
 			// 尝试获取前端传过来的表单 string 流并将其转换成 Product 实体类
 			product = mapper.readValue(productStr, Product.class);
-			// 从 Session 则获取当前店铺的 Id 并赋值给 product,减少对前端数据的依赖
-			Shop currentShop = (Shop) request.getSession().getAttribute("currentShop");
-			product.setShop(currentShop);
 		} catch (Exception e) {
 			modelMap.put("success", false);
 			modelMap.put("errMsg", e.toString());
@@ -184,6 +182,9 @@ public class ProductManagementController {
 		// 非空判断
 		if (product != null) {
 			try {
+				// 从 Session 则获取当前店铺的 Id 并赋值给 product,减少对前端数据的依赖
+				Shop currentShop = (Shop) request.getSession().getAttribute("currentShop");
+				product.setShop(currentShop);
 				// 开始进行商店信息变更操作
 				ProductExecution pe = productService.modifyProduct(product, thumbnail, productImgList);
 				if (pe.getState() == ProductStateEnum.SUCCESS.getState()) {
