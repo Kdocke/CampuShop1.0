@@ -64,6 +64,8 @@ public class ShopManagementController {
 			Shop currentShop = new Shop();
 			currentShop.setShopId(shopId);
 			request.getSession().setAttribute("currentShop", currentShop);
+			Shop tempShop = (Shop)request.getSession().getAttribute("currentShop");
+			System.out.println("Shop: " + tempShop.getShopId());
 			modelMap.put("redirect", false);
 		}
 		return modelMap;

@@ -4,6 +4,15 @@ import java.util.List;
 
 import com.kdocke.o2o.entity.ProductImg;
 
+/**
+ * 商品图片相关的数据库操作接口，由 mybatis 实现 
+ * queryProductImgList:查询商品的详情图
+ * batchInsertProductImg:插入商品详情图
+ * deleteProductImgByProductId:删除商品详情图
+ * 
+ * @author Kdocke
+ *
+ */
 public interface ProductImgDao {
 
 	/**
