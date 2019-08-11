@@ -2,6 +2,12 @@ package com.kdocke.o2o.dto;
 
 import java.io.InputStream;
 
+/**
+ * 对 image 文件流的封装
+ * 
+ * @author Kdocke
+ *
+ */
 public class ImageHolder {
 
 	private String imageName;

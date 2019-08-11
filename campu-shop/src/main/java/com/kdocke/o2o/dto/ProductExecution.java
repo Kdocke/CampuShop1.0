@@ -5,6 +5,12 @@ import java.util.List;
 import com.kdocke.o2o.entity.Product;
 import com.kdocke.o2o.enums.ProductStateEnum;
 
+/**
+ * 对 Product 操作后所返回的结果
+ * 
+ * @author Kdocke
+ *
+ */
 public class ProductExecution {
 
 	// 结果状态
