@@ -35,7 +35,7 @@
 		</collection>
 	</resultMap>
 	
-	<select id="queryProductList" resultMap="productMap">
+	<select id="queryProductList" resultType="com.kdocke.o2o.entity.Product">
 		SELECT
 		product_id,
 		product_name,

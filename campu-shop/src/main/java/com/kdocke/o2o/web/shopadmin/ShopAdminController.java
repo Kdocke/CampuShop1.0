@@ -13,16 +13,16 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping(value = "shopadmin", method = { RequestMethod.GET })
 public class ShopAdminController {
 
-	@RequestMapping(value = "/shopoperation")
-	public String shopOperation() {
-		// 转发到店铺注册/编辑页面
-		return "shop/shopoperation";
-	}
-
 	@RequestMapping(value = "/shoplist")
 	public String shopList() {
 		// 转发到店铺列表页面
 		return "shop/shoplist";
+	}
+	
+	@RequestMapping(value = "/shopoperation")
+	public String shopOperation() {
+		// 转发到店铺注册/编辑页面
+		return "shop/shopoperation";
 	}
 
 	@RequestMapping(value = "/shopmanagement")
