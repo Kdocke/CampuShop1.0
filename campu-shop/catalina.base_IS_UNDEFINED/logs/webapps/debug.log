@@ -1,111 +1,48 @@
-2019-08-09 22:04:03:669 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductList - ==>  Preparing: SELECT product_id, product_name, product_desc, img_addr, normal_price, promotion_price, priority, create_time, last_edit_time, enable_status, product_category_id, shop_id FROM tb_product ORDER BY priority DESC LIMIT ?,?; 
-2019-08-09 22:04:03:759 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductList - ==> Parameters: 0(Integer), 3(Integer)
-2019-08-09 22:04:03:800 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductList - <==      Total: 3
-2019-08-09 22:04:03:806 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductCount - ==>  Preparing: SELECT count(1) FROM tb_product 
-2019-08-09 22:04:03:806 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductCount - ==> Parameters: 
-2019-08-09 22:04:03:826 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductCount - <==      Total: 1
-2019-08-09 22:04:03:828 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductList - ==>  Preparing: SELECT product_id, product_name, product_desc, img_addr, normal_price, promotion_price, priority, create_time, last_edit_time, enable_status, product_category_id, shop_id FROM tb_product WHERE product_name like '%测试%' ORDER BY priority DESC LIMIT ?,?; 
-2019-08-09 22:04:03:829 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductList - ==> Parameters: 0(Integer), 3(Integer)
-2019-08-09 22:04:03:838 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductList - <==      Total: 3
-2019-08-09 22:04:03:840 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductCount - ==>  Preparing: SELECT count(1) FROM tb_product WHERE product_name like '%测试%' 
-2019-08-09 22:04:03:840 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductCount - ==> Parameters: 
-2019-08-09 22:04:03:842 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductCount - <==      Total: 1
-2019-08-09 22:04:03:848 [main] DEBUG c.k.o2o.dao.ProductImgDao.batchInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(img_addr,img_desc,priority,create_time,product_id) VALUES (?,?,?,?,?) , (?,?,?,?,?) 
-2019-08-09 22:04:03:850 [main] DEBUG c.k.o2o.dao.ProductImgDao.batchInsertProductImg - ==> Parameters: 图片1(String), 测试图片1(String), 1(Integer), 2019-08-09 22:04:03.844(Timestamp), 1(Long), 图片2(String), null, 1(Integer), 2019-08-09 22:04:03.844(Timestamp), 1(Long)
-2019-08-09 22:04:03:913 [main] DEBUG c.k.o2o.dao.ProductImgDao.batchInsertProductImg - <==    Updates: 2
-2019-08-09 22:04:03:913 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductById - ==>  Preparing: SELECT p.product_id, p.product_name, p.product_desc, p.img_addr, p.normal_price, p.promotion_price, p.priority, p.create_time, p.last_edit_time, p.enable_status, p.product_category_id, p.shop_id, pm.product_img_id, pm.img_addr, pm.img_desc, pm.priority, pm.create_time FROM tb_product p LEFT JOIN tb_product_img pm ON p.product_id = pm.product_id WHERE p.product_id = ? ORDER BY pm.priority DESC 
-2019-08-09 22:04:03:914 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductById - ==> Parameters: 1(Long)
-2019-08-09 22:04:03:918 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductById - <==      Total: 4
-2019-08-09 22:04:03:983 [main] DEBUG com.kdocke.o2o.dao.ProductDao.updateProduct - ==>  Preparing: UPDATE tb_product SET product_name=?, product_category_id=? WHERE product_id = ? AND shop_id=? 
-2019-08-09 22:04:03:983 [main] DEBUG com.kdocke.o2o.dao.ProductDao.updateProduct - ==> Parameters: 第二个产品(String), 2(Long), 1(Long), 1(Long)
-2019-08-09 22:04:04:029 [main] DEBUG com.kdocke.o2o.dao.ProductDao.updateProduct - <==    Updates: 1
-2019-08-09 22:04:48:657 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductList - ==>  Preparing: SELECT product_id, product_name, product_desc, img_addr, normal_price, promotion_price, priority, create_time, last_edit_time, enable_status, product_category_id, shop_id FROM tb_product ORDER BY priority DESC LIMIT ?,?; 
-2019-08-09 22:04:48:681 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductList - ==> Parameters: 0(Integer), 3(Integer)
-2019-08-09 22:04:48:731 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductList - <==      Total: 3
-2019-08-09 22:04:48:737 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductCount - ==>  Preparing: SELECT count(1) FROM tb_product 
-2019-08-09 22:04:48:738 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductCount - ==> Parameters: 
-2019-08-09 22:04:48:753 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductCount - <==      Total: 1
-2019-08-09 22:04:48:754 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductList - ==>  Preparing: SELECT product_id, product_name, product_desc, img_addr, normal_price, promotion_price, priority, create_time, last_edit_time, enable_status, product_category_id, shop_id FROM tb_product WHERE product_name like '%测试%' ORDER BY priority DESC LIMIT ?,?; 
-2019-08-09 22:04:48:755 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductList - ==> Parameters: 0(Integer), 3(Integer)
-2019-08-09 22:04:48:760 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductList - <==      Total: 3
-2019-08-09 22:04:48:761 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductCount - ==>  Preparing: SELECT count(1) FROM tb_product WHERE product_name like '%测试%' 
-2019-08-09 22:04:48:762 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductCount - ==> Parameters: 
-2019-08-09 22:04:48:763 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductCount - <==      Total: 1
-2019-08-09 22:04:48:770 [main] DEBUG c.k.o2o.dao.ProductImgDao.batchInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(img_addr,img_desc,priority,create_time,product_id) VALUES (?,?,?,?,?) , (?,?,?,?,?) 
-2019-08-09 22:04:48:772 [main] DEBUG c.k.o2o.dao.ProductImgDao.batchInsertProductImg - ==> Parameters: 图片1(String), 测试图片1(String), 1(Integer), 2019-08-09 22:04:48.766(Timestamp), 1(Long), 图片2(String), null, 1(Integer), 2019-08-09 22:04:48.766(Timestamp), 1(Long)
-2019-08-09 22:04:48:838 [main] DEBUG c.k.o2o.dao.ProductImgDao.batchInsertProductImg - <==    Updates: 2
-2019-08-09 22:04:48:839 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductById - ==>  Preparing: SELECT p.product_id, p.product_name, p.product_desc, p.img_addr, p.normal_price, p.promotion_price, p.priority, p.create_time, p.last_edit_time, p.enable_status, p.product_category_id, p.shop_id, pm.product_img_id, pm.img_addr, pm.img_desc, pm.priority, pm.create_time FROM tb_product p LEFT JOIN tb_product_img pm ON p.product_id = pm.product_id WHERE p.product_id = ? ORDER BY pm.priority DESC 
-2019-08-09 22:04:48:840 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductById - ==> Parameters: 1(Long)
-2019-08-09 22:04:48:844 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductById - <==      Total: 6
-2019-08-09 22:04:48:849 [main] DEBUG com.kdocke.o2o.dao.ProductDao.updateProduct - ==>  Preparing: UPDATE tb_product SET product_name=?, product_category_id=? WHERE product_id = ? AND shop_id=? 
-2019-08-09 22:04:48:850 [main] DEBUG com.kdocke.o2o.dao.ProductDao.updateProduct - ==> Parameters: 第二个产品(String), 2(Long), 1(Long), 1(Long)
-2019-08-09 22:04:48:871 [main] DEBUG com.kdocke.o2o.dao.ProductDao.updateProduct - <==    Updates: 1
-2019-08-09 22:05:46:541 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductList - ==>  Preparing: SELECT product_id, product_name, product_desc, img_addr, normal_price, promotion_price, priority, create_time, last_edit_time, enable_status, product_category_id, shop_id FROM tb_product ORDER BY priority DESC LIMIT ?,?; 
-2019-08-09 22:05:46:573 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductList - ==> Parameters: 0(Integer), 3(Integer)
-2019-08-09 22:05:46:616 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductList - <==      Total: 3
-2019-08-09 22:05:46:625 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductCount - ==>  Preparing: SELECT count(1) FROM tb_product 
-2019-08-09 22:05:46:625 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductCount - ==> Parameters: 
-2019-08-09 22:05:46:647 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductCount - <==      Total: 1
-2019-08-09 22:05:46:650 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductList - ==>  Preparing: SELECT product_id, product_name, product_desc, img_addr, normal_price, promotion_price, priority, create_time, last_edit_time, enable_status, product_category_id, shop_id FROM tb_product WHERE product_name like '%测试%' ORDER BY priority DESC LIMIT ?,?; 
-2019-08-09 22:05:46:650 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductList - ==> Parameters: 0(Integer), 3(Integer)
-2019-08-09 22:05:46:656 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductList - <==      Total: 3
-2019-08-09 22:05:46:657 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductCount - ==>  Preparing: SELECT count(1) FROM tb_product WHERE product_name like '%测试%' 
-2019-08-09 22:05:46:658 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductCount - ==> Parameters: 
-2019-08-09 22:05:46:670 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductCount - <==      Total: 1
-2019-08-09 22:05:46:678 [main] DEBUG c.k.o2o.dao.ProductImgDao.batchInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(img_addr,img_desc,priority,create_time,product_id) VALUES (?,?,?,?,?) , (?,?,?,?,?) 
-2019-08-09 22:05:46:681 [main] DEBUG c.k.o2o.dao.ProductImgDao.batchInsertProductImg - ==> Parameters: 图片1(String), 测试图片1(String), 1(Integer), 2019-08-09 22:05:46.673(Timestamp), 1(Long), 图片2(String), null, 1(Integer), 2019-08-09 22:05:46.673(Timestamp), 1(Long)
-2019-08-09 22:05:46:713 [main] DEBUG c.k.o2o.dao.ProductImgDao.batchInsertProductImg - <==    Updates: 2
-2019-08-09 22:05:46:714 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductById - ==>  Preparing: SELECT p.product_id, p.product_name, p.product_desc, p.img_addr, p.normal_price, p.promotion_price, p.priority, p.create_time, p.last_edit_time, p.enable_status, p.product_category_id, p.shop_id, pm.product_img_id, pm.img_addr, pm.img_desc, pm.priority, pm.create_time FROM tb_product p LEFT JOIN tb_product_img pm ON p.product_id = pm.product_id WHERE p.product_id = ? ORDER BY pm.priority DESC 
-2019-08-09 22:05:46:714 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductById - ==> Parameters: 1(Long)
-2019-08-09 22:05:46:720 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductById - <==      Total: 8
-2019-08-09 22:05:46:725 [main] DEBUG com.kdocke.o2o.dao.ProductDao.updateProduct - ==>  Preparing: UPDATE tb_product SET product_name=?, product_category_id=? WHERE product_id = ? AND shop_id=? 
-2019-08-09 22:05:46:726 [main] DEBUG com.kdocke.o2o.dao.ProductDao.updateProduct - ==> Parameters: 第二个产品(String), 2(Long), 1(Long), 1(Long)
-2019-08-09 22:05:46:771 [main] DEBUG com.kdocke.o2o.dao.ProductDao.updateProduct - <==    Updates: 1
-2019-08-09 22:07:06:089 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductList - ==>  Preparing: SELECT product_id, product_name, product_desc, img_addr, normal_price, promotion_price, priority, create_time, last_edit_time, enable_status, product_category_id, shop_id FROM tb_product ORDER BY priority DESC LIMIT ?,?; 
-2019-08-09 22:07:06:116 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductList - ==> Parameters: 0(Integer), 3(Integer)
-2019-08-09 22:07:06:164 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductList - <==      Total: 3
-2019-08-09 22:07:06:173 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductCount - ==>  Preparing: SELECT count(1) FROM tb_product 
-2019-08-09 22:07:06:174 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductCount - ==> Parameters: 
-2019-08-09 22:07:06:185 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductCount - <==      Total: 1
-2019-08-09 22:07:06:187 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductList - ==>  Preparing: SELECT product_id, product_name, product_desc, img_addr, normal_price, promotion_price, priority, create_time, last_edit_time, enable_status, product_category_id, shop_id FROM tb_product WHERE product_name like '%测试%' ORDER BY priority DESC LIMIT ?,?; 
-2019-08-09 22:07:06:188 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductList - ==> Parameters: 0(Integer), 3(Integer)
-2019-08-09 22:07:06:193 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductList - <==      Total: 3
-2019-08-09 22:07:06:194 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductCount - ==>  Preparing: SELECT count(1) FROM tb_product WHERE product_name like '%测试%' 
-2019-08-09 22:07:06:194 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductCount - ==> Parameters: 
-2019-08-09 22:07:06:208 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductCount - <==      Total: 1
-2019-08-09 22:07:06:216 [main] DEBUG c.k.o2o.dao.ProductImgDao.batchInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(img_addr,img_desc,priority,create_time,product_id) VALUES (?,?,?,?,?) , (?,?,?,?,?) 
-2019-08-09 22:07:06:219 [main] DEBUG c.k.o2o.dao.ProductImgDao.batchInsertProductImg - ==> Parameters: 图片1(String), 测试图片1(String), 1(Integer), 2019-08-09 22:07:06.211(Timestamp), 1(Long), 图片2(String), null, 1(Integer), 2019-08-09 22:07:06.211(Timestamp), 1(Long)
-2019-08-09 22:07:06:282 [main] DEBUG c.k.o2o.dao.ProductImgDao.batchInsertProductImg - <==    Updates: 2
-2019-08-09 22:07:06:283 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductById - ==>  Preparing: SELECT p.product_id, p.product_name, p.product_desc, p.img_addr, p.normal_price, p.promotion_price, p.priority, p.create_time, p.last_edit_time, p.enable_status, p.product_category_id, p.shop_id, pm.product_img_id, pm.img_addr, pm.img_desc, pm.priority, pm.create_time FROM tb_product p LEFT JOIN tb_product_img pm ON p.product_id = pm.product_id WHERE p.product_id = ? ORDER BY pm.priority DESC 
-2019-08-09 22:07:06:283 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductById - ==> Parameters: 1(Long)
-2019-08-09 22:07:06:286 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductById - <==      Total: 4
-2019-08-09 22:07:06:287 [main] DEBUG c.k.o.d.ProductImgDao.deleteProductImgByProductId - ==>  Preparing: DELETE FROM tb_product_img WHERE product_id = ? 
-2019-08-09 22:07:06:287 [main] DEBUG c.k.o.d.ProductImgDao.deleteProductImgByProductId - ==> Parameters: 1(Long)
-2019-08-09 22:07:06:306 [main] DEBUG c.k.o.d.ProductImgDao.deleteProductImgByProductId - <==    Updates: 4
-2019-08-09 22:07:06:313 [main] DEBUG com.kdocke.o2o.dao.ProductDao.updateProduct - ==>  Preparing: UPDATE tb_product SET product_name=?, product_category_id=? WHERE product_id = ? AND shop_id=? 
-2019-08-09 22:07:06:313 [main] DEBUG com.kdocke.o2o.dao.ProductDao.updateProduct - ==> Parameters: 第二个产品(String), 2(Long), 1(Long), 1(Long)
-2019-08-09 22:07:06:332 [main] DEBUG com.kdocke.o2o.dao.ProductDao.updateProduct - <==    Updates: 1
-2019-08-09 22:08:13:595 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductList - ==>  Preparing: SELECT product_id, product_name, product_desc, img_addr, normal_price, promotion_price, priority, create_time, last_edit_time, enable_status, product_category_id, shop_id FROM tb_product ORDER BY priority DESC LIMIT ?,?; 
-2019-08-09 22:08:13:622 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductList - ==> Parameters: 0(Integer), 3(Integer)
-2019-08-09 22:08:13:663 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductList - <==      Total: 3
-2019-08-09 22:08:13:669 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductCount - ==>  Preparing: SELECT count(1) FROM tb_product 
-2019-08-09 22:08:13:670 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductCount - ==> Parameters: 
-2019-08-09 22:08:13:692 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductCount - <==      Total: 1
-2019-08-09 22:08:13:694 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductList - ==>  Preparing: SELECT product_id, product_name, product_desc, img_addr, normal_price, promotion_price, priority, create_time, last_edit_time, enable_status, product_category_id, shop_id FROM tb_product WHERE product_name like '%测试%' ORDER BY priority DESC LIMIT ?,?; 
-2019-08-09 22:08:13:695 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductList - ==> Parameters: 0(Integer), 3(Integer)
-2019-08-09 22:08:13:699 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductList - <==      Total: 3
-2019-08-09 22:08:13:701 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductCount - ==>  Preparing: SELECT count(1) FROM tb_product WHERE product_name like '%测试%' 
-2019-08-09 22:08:13:702 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductCount - ==> Parameters: 
-2019-08-09 22:08:13:703 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductCount - <==      Total: 1
-2019-08-09 22:08:13:711 [main] DEBUG c.k.o2o.dao.ProductImgDao.batchInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(img_addr,img_desc,priority,create_time,product_id) VALUES (?,?,?,?,?) , (?,?,?,?,?) 
-2019-08-09 22:08:13:713 [main] DEBUG c.k.o2o.dao.ProductImgDao.batchInsertProductImg - ==> Parameters: 图片1(String), 测试图片1(String), 1(Integer), 2019-08-09 22:08:13.706(Timestamp), 1(Long), 图片2(String), null, 1(Integer), 2019-08-09 22:08:13.706(Timestamp), 1(Long)
-2019-08-09 22:08:13:774 [main] DEBUG c.k.o2o.dao.ProductImgDao.batchInsertProductImg - <==    Updates: 2
-2019-08-09 22:08:13:774 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductById - ==>  Preparing: SELECT p.product_id, p.product_name, p.product_desc, p.img_addr, p.normal_price, p.promotion_price, p.priority, p.create_time, p.last_edit_time, p.enable_status, p.product_category_id, p.shop_id, pm.product_img_id, pm.img_addr, pm.img_desc, pm.priority, pm.create_time FROM tb_product p LEFT JOIN tb_product_img pm ON p.product_id = pm.product_id WHERE p.product_id = ? ORDER BY pm.priority DESC 
-2019-08-09 22:08:13:775 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductById - ==> Parameters: 1(Long)
-2019-08-09 22:08:13:777 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductById - <==      Total: 2
-2019-08-09 22:08:13:778 [main] DEBUG c.k.o.d.ProductImgDao.deleteProductImgByProductId - ==>  Preparing: DELETE FROM tb_product_img WHERE product_id = ? 
-2019-08-09 22:08:13:778 [main] DEBUG c.k.o.d.ProductImgDao.deleteProductImgByProductId - ==> Parameters: 1(Long)
-2019-08-09 22:08:13:807 [main] DEBUG c.k.o.d.ProductImgDao.deleteProductImgByProductId - <==    Updates: 2
-2019-08-09 22:08:13:810 [main] DEBUG com.kdocke.o2o.dao.ProductDao.updateProduct - ==>  Preparing: UPDATE tb_product SET product_name=?, product_category_id=? WHERE product_id = ? AND shop_id=? 
-2019-08-09 22:08:13:810 [main] DEBUG com.kdocke.o2o.dao.ProductDao.updateProduct - ==> Parameters: 第二个产品(String), 2(Long), 1(Long), 1(Long)
-2019-08-09 22:08:13:858 [main] DEBUG com.kdocke.o2o.dao.ProductDao.updateProduct - <==    Updates: 1
+2019-08-16 23:32:38:385 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductList - ==>  Preparing: SELECT product_id, product_name, product_desc, img_addr, normal_price, promotion_price, priority, create_time, last_edit_time, enable_status, product_category_id, shop_id FROM tb_product ORDER BY priority DESC LIMIT ?,?; 
+2019-08-16 23:32:38:457 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductList - ==> Parameters: 0(Integer), 3(Integer)
+2019-08-16 23:32:38:588 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductList - <==      Total: 3
+2019-08-16 23:32:38:594 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductCount - ==>  Preparing: SELECT count(1) FROM tb_product 
+2019-08-16 23:32:38:595 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductCount - ==> Parameters: 
+2019-08-16 23:32:38:629 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductCount - <==      Total: 1
+2019-08-16 23:32:38:632 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductList - ==>  Preparing: SELECT product_id, product_name, product_desc, img_addr, normal_price, promotion_price, priority, create_time, last_edit_time, enable_status, product_category_id, shop_id FROM tb_product WHERE product_name like '%测试%' ORDER BY priority DESC LIMIT ?,?; 
+2019-08-16 23:32:38:632 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductList - ==> Parameters: 0(Integer), 3(Integer)
+2019-08-16 23:32:38:635 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductList - <==      Total: 3
+2019-08-16 23:32:38:636 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductCount - ==>  Preparing: SELECT count(1) FROM tb_product WHERE product_name like '%测试%' 
+2019-08-16 23:32:38:637 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductCount - ==> Parameters: 
+2019-08-16 23:32:38:638 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductCount - <==      Total: 1
+2019-08-16 23:32:38:645 [main] DEBUG c.k.o2o.dao.ProductImgDao.batchInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(img_addr,img_desc,priority,create_time,product_id) VALUES (?,?,?,?,?) , (?,?,?,?,?) 
+2019-08-16 23:32:38:648 [main] DEBUG c.k.o2o.dao.ProductImgDao.batchInsertProductImg - ==> Parameters: 图片1(String), 测试图片1(String), 1(Integer), 2019-08-16 23:32:38.641(Timestamp), 1(Long), 图片2(String), null, 1(Integer), 2019-08-16 23:32:38.641(Timestamp), 1(Long)
+2019-08-16 23:32:38:771 [main] DEBUG c.k.o2o.dao.ProductImgDao.batchInsertProductImg - <==    Updates: 2
+2019-08-16 23:32:38:772 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductById - ==>  Preparing: SELECT p.product_id, p.product_name, p.product_desc, p.img_addr, p.normal_price, p.promotion_price, p.priority, p.create_time, p.last_edit_time, p.enable_status, p.product_category_id, p.shop_id, pm.product_img_id, pm.img_addr, pm.img_desc, pm.priority, pm.create_time FROM tb_product p LEFT JOIN tb_product_img pm ON p.product_id = pm.product_id WHERE p.product_id = ? ORDER BY pm.priority DESC 
+2019-08-16 23:32:38:772 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductById - ==> Parameters: 1(Long)
+2019-08-16 23:32:38:842 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductById - <==      Total: 2
+2019-08-16 23:32:38:843 [main] DEBUG c.k.o.d.ProductImgDao.deleteProductImgByProductId - ==>  Preparing: DELETE FROM tb_product_img WHERE product_id = ? 
+2019-08-16 23:32:38:843 [main] DEBUG c.k.o.d.ProductImgDao.deleteProductImgByProductId - ==> Parameters: 1(Long)
+2019-08-16 23:32:38:864 [main] DEBUG c.k.o.d.ProductImgDao.deleteProductImgByProductId - <==    Updates: 2
+2019-08-16 23:32:38:867 [main] DEBUG com.kdocke.o2o.dao.ProductDao.updateProduct - ==>  Preparing: UPDATE tb_product SET product_name=?, product_category_id=? WHERE product_id = ? AND shop_id=? 
+2019-08-16 23:32:38:868 [main] DEBUG com.kdocke.o2o.dao.ProductDao.updateProduct - ==> Parameters: 第二个产品(String), 2(Long), 1(Long), 1(Long)
+2019-08-16 23:32:38:888 [main] DEBUG com.kdocke.o2o.dao.ProductDao.updateProduct - <==    Updates: 1
+2019-08-16 23:33:20:496 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductList - ==>  Preparing: SELECT product_id, product_name, product_desc, img_addr, normal_price, promotion_price, priority, create_time, last_edit_time, enable_status, product_category_id, shop_id FROM tb_product ORDER BY priority DESC LIMIT ?,?; 
+2019-08-16 23:33:20:554 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductList - ==> Parameters: 0(Integer), 3(Integer)
+2019-08-16 23:33:20:605 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductList - <==      Total: 3
+2019-08-16 23:33:20:614 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductCount - ==>  Preparing: SELECT count(1) FROM tb_product 
+2019-08-16 23:33:20:614 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductCount - ==> Parameters: 
+2019-08-16 23:33:20:625 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductCount - <==      Total: 1
+2019-08-16 23:33:20:628 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductList - ==>  Preparing: SELECT product_id, product_name, product_desc, img_addr, normal_price, promotion_price, priority, create_time, last_edit_time, enable_status, product_category_id, shop_id FROM tb_product WHERE product_name like '%测试%' ORDER BY priority DESC LIMIT ?,?; 
+2019-08-16 23:33:20:628 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductList - ==> Parameters: 0(Integer), 3(Integer)
+2019-08-16 23:33:20:654 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductList - <==      Total: 3
+2019-08-16 23:33:20:655 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductCount - ==>  Preparing: SELECT count(1) FROM tb_product WHERE product_name like '%测试%' 
+2019-08-16 23:33:20:656 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductCount - ==> Parameters: 
+2019-08-16 23:33:20:667 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductCount - <==      Total: 1
+2019-08-16 23:33:20:676 [main] DEBUG c.k.o2o.dao.ProductImgDao.batchInsertProductImg - ==>  Preparing: INSERT INTO tb_product_img(img_addr,img_desc,priority,create_time,product_id) VALUES (?,?,?,?,?) , (?,?,?,?,?) 
+2019-08-16 23:33:20:679 [main] DEBUG c.k.o2o.dao.ProductImgDao.batchInsertProductImg - ==> Parameters: 图片1(String), 测试图片1(String), 1(Integer), 2019-08-16 23:33:20.671(Timestamp), 1(Long), 图片2(String), null, 1(Integer), 2019-08-16 23:33:20.671(Timestamp), 1(Long)
+2019-08-16 23:33:20:739 [main] DEBUG c.k.o2o.dao.ProductImgDao.batchInsertProductImg - <==    Updates: 2
+2019-08-16 23:33:20:740 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductById - ==>  Preparing: SELECT p.product_id, p.product_name, p.product_desc, p.img_addr, p.normal_price, p.promotion_price, p.priority, p.create_time, p.last_edit_time, p.enable_status, p.product_category_id, p.shop_id, pm.product_img_id, pm.img_addr, pm.img_desc, pm.priority, pm.create_time FROM tb_product p LEFT JOIN tb_product_img pm ON p.product_id = pm.product_id WHERE p.product_id = ? ORDER BY pm.priority DESC 
+2019-08-16 23:33:20:741 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductById - ==> Parameters: 1(Long)
+2019-08-16 23:33:20:746 [main] DEBUG com.kdocke.o2o.dao.ProductDao.queryProductById - <==      Total: 2
+2019-08-16 23:33:20:746 [main] DEBUG c.k.o.d.ProductImgDao.deleteProductImgByProductId - ==>  Preparing: DELETE FROM tb_product_img WHERE product_id = ? 
+2019-08-16 23:33:20:747 [main] DEBUG c.k.o.d.ProductImgDao.deleteProductImgByProductId - ==> Parameters: 1(Long)
+2019-08-16 23:33:20:773 [main] DEBUG c.k.o.d.ProductImgDao.deleteProductImgByProductId - <==    Updates: 2
+2019-08-16 23:33:20:776 [main] DEBUG com.kdocke.o2o.dao.ProductDao.updateProduct - ==>  Preparing: UPDATE tb_product SET product_name=?, product_category_id=? WHERE product_id = ? AND shop_id=? 
+2019-08-16 23:33:20:777 [main] DEBUG com.kdocke.o2o.dao.ProductDao.updateProduct - ==> Parameters: 第二个产品(String), 2(Long), 1(Long), 1(Long)
+2019-08-16 23:33:20:805 [main] DEBUG com.kdocke.o2o.dao.ProductDao.updateProduct - <==    Updates: 1

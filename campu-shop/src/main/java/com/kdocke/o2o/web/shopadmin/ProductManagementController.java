@@ -150,7 +150,6 @@ public class ProductManagementController {
 		int pageSize = HttpServletRequestUtil.getInt(request, "pageSize");
 		// 从当前 Session 中获取店铺信息,主要是获取 shopId
 		Shop currentShop = (Shop) request.getSession().getAttribute("currentShop");
-		System.out.println("ShopIsNull: " + (currentShop == null));
 		// 空值判断
 		if ((pageIndex > -1) && (pageSize > -1) && (currentShop != null) && (currentShop.getShopId() != null)) {
 			// 获取传入的需要检索的条件,包括是否需要从某个商品类别以及模糊查找商品名去筛选某个店铺下的商品列表
