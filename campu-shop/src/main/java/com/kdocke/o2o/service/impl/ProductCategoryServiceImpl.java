@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.kdocke.o2o.dao.ProductCategoryDao;
+import com.kdocke.o2o.dao.ProductDao;
 import com.kdocke.o2o.dto.ProductCategoryExecution;
 import com.kdocke.o2o.entity.ProductCategory;
 import com.kdocke.o2o.enums.ProductCategoryStateEnum;
@@ -18,6 +19,9 @@ public class ProductCategoryServiceImpl implements ProductCategoryService {
 
 	@Autowired
 	private ProductCategoryDao productCategoryDao;
+	
+	@Autowired
+	private ProductDao ProductDao;
 
 	@Override
 	public List<ProductCategory> getProductCategoryList(Long shopId) {
@@ -48,7 +52,16 @@ public class ProductCategoryServiceImpl implements ProductCategoryService {
 	@Transactional
 	public ProductCategoryExecution deleteProductCategory(long productCategoryId, long shopId)
 			throws ProductCategoryOperationException {
-		// TODO 将此商品类别下的商品的类 Id 置为空
+		// 解除 tb_product 里的商品与该 productCategoryId 的关联
+		try {
+			int effectedNum = ProductDao.updateProductCategoryToNull(productCategoryId);
+			if (effectedNum < 0) {
+				throw new RuntimeException("商品类别更新失败!");
+			}
+		} catch (Exception e) {
+			throw new RuntimeException("deleteProductCategory error: " + e.getMessage());
+		}
+		// 删除该 productCategory
 		try {
 			int effectedNum = productCategoryDao.deleteProductCategory(productCategoryId, shopId);
 			if (effectedNum <= 0) {

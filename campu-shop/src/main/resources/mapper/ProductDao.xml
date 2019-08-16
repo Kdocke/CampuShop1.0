@@ -161,4 +161,12 @@
 		#{normalPrice},#{promotionPrice},#{priority},#{createTime},
 		#{lastEditTime},#{enableStatus},#{productCategory.productCategoryId},#{shop.shopId})
 	</insert>
+	
+	<update id="updateProductCategoryToNull" parameterType="Long">
+		UPDATE tb_product
+		SET
+		product_category_id = null
+		WHERE product_category_id =
+		#{productCategoryId}
+	</update>
 </mapper>

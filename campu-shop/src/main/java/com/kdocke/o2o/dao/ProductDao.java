@@ -7,12 +7,8 @@ import org.apache.ibatis.annotations.Param;
 import com.kdocke.o2o.entity.Product;
 
 /**
- * 商品相关的数据库操作接口，由 mybatis 实现 
- * insertProduct:插入商品
- * queryProductById:通过商品 Id 查询商品
- * queryProductList:列表分页查询商品
- * queryProductCount:按条件查询商品总数
- * updateProduct:更新商品
+ * 商品相关的数据库操作接口，由 mybatis 实现 insertProduct:插入商品 queryProductById:通过商品 Id 查询商品
+ * queryProductList:列表分页查询商品 queryProductCount:按条件查询商品总数 updateProduct:更新商品
  * 
  * @author Kdocke
  *
@@ -61,5 +57,13 @@ public interface ProductDao {
 	 * @return
 	 */
 	int updateProduct(Product product);
+
+	/**
+	 * 删除商品类别之前，将商品的商品类别 ID 置为空
+	 * 
+	 * @param productCategoryId
+	 * @return
+	 */
+	int updateProductCategoryToNull(long productCategoryId);
 
 }
