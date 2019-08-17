@@ -1,3 +1,9 @@
 2019-08-17 00:52:27:546 [main] DEBUG c.k.o2o.dao.ProductDao.updateProductCategoryToNull - ==>  Preparing: UPDATE tb_product SET product_category_id = null WHERE product_category_id = ? 
 2019-08-17 00:52:27:581 [main] DEBUG c.k.o2o.dao.ProductDao.updateProductCategoryToNull - ==> Parameters: 2(Long)
 2019-08-17 00:52:27:654 [main] DEBUG c.k.o2o.dao.ProductDao.updateProductCategoryToNull - <==    Updates: 1
+2019-08-17 23:48:23:796 [main] DEBUG c.kdocke.o2o.dao.ShopCategoryDao.queryShopCategory - ==>  Preparing: SELECT shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id FROM tb_shop_category WHERE parent_id is null ORDER BY priority DESC 
+2019-08-17 23:48:23:821 [main] DEBUG c.kdocke.o2o.dao.ShopCategoryDao.queryShopCategory - ==> Parameters: 
+2019-08-17 23:48:23:911 [main] DEBUG c.kdocke.o2o.dao.ShopCategoryDao.queryShopCategory - <==      Total: 1
+2019-08-17 23:48:44:221 [main] DEBUG com.kdocke.o2o.dao.HeadLineDao.queryHeadLine - ==>  Preparing: SELECT line_id, line_name, line_link, line_img, priority, enable_status, create_time, last_edit_time FROM tb_head_line ORDER BY priority DESC 
+2019-08-17 23:48:44:253 [main] DEBUG com.kdocke.o2o.dao.HeadLineDao.queryHeadLine - ==> Parameters: 
+2019-08-17 23:48:44:299 [main] DEBUG com.kdocke.o2o.dao.HeadLineDao.queryHeadLine - <==      Total: 4
