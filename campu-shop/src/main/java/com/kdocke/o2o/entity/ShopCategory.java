@@ -15,7 +15,7 @@ public class ShopCategory {
 	// 商铺类别名
 	private String shopCategoryName;
 	// 商铺类别描述
-	private String shopCategoryDecs;
+	private String shopCategoryDesc;
 	// 商铺类别图片
 	private String shopCategoryImg;
 	// 权重
@@ -39,11 +39,11 @@ public class ShopCategory {
 	public void setShopCategoryName(String shopCategoryName) {
 		this.shopCategoryName = shopCategoryName;
 	}
-	public String getShopCategoryDecs() {
-		return shopCategoryDecs;
+	public String getShopCategoryDesc() {
+		return shopCategoryDesc;
 	}
-	public void setShopCategoryDecs(String shopCategoryDecs) {
-		this.shopCategoryDecs = shopCategoryDecs;
+	public void setShopCategoryDesc(String shopCategoryDesc) {
+		this.shopCategoryDesc = shopCategoryDesc;
 	}
 	public String getShopCategoryImg() {
 		return shopCategoryImg;
