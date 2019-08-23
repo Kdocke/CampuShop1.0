@@ -13,6 +13,11 @@ public class FrontendController {
 		return "frontend/index";
 	}
 	
+	@RequestMapping(value = "/shoplist", method = RequestMethod.GET)
+	private String showShopList() {
+		return "frontend/shoplist";
+	}
+	
 	@RequestMapping(value = "/mainpage", method = RequestMethod.GET)
 	private String showMainPage() {
 		return "frontend/mainpage";
@@ -26,11 +31,6 @@ public class FrontendController {
 	@RequestMapping(value = "/shopdetail", method = RequestMethod.GET)
 	private String showShopDetail() {
 		return "frontend/shopdetail";
-	}
-
-	@RequestMapping(value = "/shoplist", method = RequestMethod.GET)
-	private String showShopList() {
-		return "frontend/shoplist";
 	}
 
 	@RequestMapping(value = "/mypoint", method = RequestMethod.GET)
