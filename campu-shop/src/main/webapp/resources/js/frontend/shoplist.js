@@ -155,7 +155,6 @@ $(function() {
 			addItems(pageSize, pageNum);
 			parentId = '';
 		}
-
 	});
 
 	// 需要查询的店铺名字发生变化后，重置页码，清空原先的店铺列表，按照新的名字去查询
@@ -176,7 +175,7 @@ $(function() {
 
 	// 点击后打开右侧栏
 	$('#me').click(function() {
-		$.openPanel('#panel-left-demo');
+		$.openPanel('#panel-right-demo');
 	});
 
 	// 初始化页面
